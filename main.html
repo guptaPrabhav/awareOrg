@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AwareOrg</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    
+    <style>
+        #heading{
+            width: 90%;
+            height: 20%;
+            color: red;
+            background-color: lightblue;
+            text-align: center;
+            margin: 10px auto;
+            border: 10px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+
+    <script>
+        var app = angular.module('awareApp',[])
+    </script>
+</head>
+<body ng-app="awareApp">
+
+    <!-- Heading -->
+    <div id="heading">
+        <h1>AwareOrg</h1>
+    </div>
+
+    <!-- Nav Bar -->
+    <div>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Container for the single page application -->
+    <div ng-view></div>
+</body>
+</html>
