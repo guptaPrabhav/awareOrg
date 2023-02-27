@@ -48,7 +48,17 @@
     </style>
 
     <script>
-        var app = angular.module('awareApp',[])
+        var app = angular.module('awareApp',['ngRoute'])
+
+        app.config(
+            function($routeProvider){
+                $routeProvider
+                .when('/',{templateUrl: "main.html"})
+                .when('/forum',{templateUrl: "forum.html"})
+                .when('/about',{templateUrl: "about.html"})
+                .when('/contact',{templateUrl: "contact.html"})
+                .otherwise({redirectTo: '/'})
+            });
     </script>
 </head>
 <body ng-app="awareApp">
@@ -61,10 +71,10 @@
     <!-- Nav Bar -->
     <div>
         <ul>
-            <li><a href="main.html">Home</a></li>
-            <li><a href="forum.html">Forum</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/forum">Forum</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact Us</a></li>
         </ul>
     </div>
 
