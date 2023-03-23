@@ -6,53 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        body {
+            font-family: Tahoma, sans-serif;
+        }
+        #heading {
+            /* position: relative;
+            top: 50%; */
+            text-align: center;
+            
+            font-size: 5rem;
+        }
         #div1 {
-            height: 50%;
+            height: 45%;
             width: 100%;
 
             position: absolute;
             top: 0;
             left: 0;
             
-            background-color: lightblue;
+            background-color: #DC2F02;
         }
         #div2 {
-            height: 30%;
+            height: 45%;
             width: 100%;
             position: absolute;
-            top: 50%;
+            top: 45%;
             left: 0;
-            background-color: lightgray;
+            background-color: #E85D04;
         }
         #div3 {
             height: 20%;
             width: 100%;
             position: absolute;
-            top: 80%;
+            top: 90%;
             left: 0;
-            background-color: lightblue;
+            background-color: #FFBA08;
         }
         #div4 {
+            /* Bottom Navigation */
             height: 5%;
             width: 100%;
             position: fixed;
             bottom: 0;
             left: 0;
-            background-color: lightgray;
+            background-color: #6A040F;
         }
+
+        #div-section2 {
+            float: left;
+            width: 35%;
+        }
+        #div-section img {
+            height: 100%;
+            width: 100%;
+        }
+        #div-section1 {
+            float: left;
+            width: 60%;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        
     </style>
 </head>
 <body>
     <div id="div1">
-        <h1>This is the Forum page</h1>
+        <div id="heading">
+            <h1>FORUM</h1>
+        </div>
     </div>
     
     <div id="div2">
-        <p>
-            Some Content <br>
-            Add divs here to add content to them
-        </p>
+        <div id="div-section1">
+            <div>
+                <h3>Feel free to share your thoughts and opinions here.</h3>
+                <span>
+                    Our thoughts are what defines us. By sharing your thoughts on this platform,
+                    you may be helping someone, unknowingly so. Or, someone else may reach out to you.
+
+                </span>
+            </div>
+        </div>
+        <div id="div-section2">
+            <img src="./images/writing.jpg" alt="writing">
+        </div>
     </div>
 
     <div id="div3">
