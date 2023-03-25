@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AwareOrg</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    
+    <style>
+        #heading{
+            width: 90%;
+            height: 20%;
+            color: white;
+            background-color: #AF7AC5;
+            text-align: center;
+            margin: 10px auto;
+            border: 50px black;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: #D7BDE2;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 17px 16px;
+            text-decoration: undereline;
+        }
+
+        
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+
+    <script>
+        var app = angular.module('awareApp',['ngRoute'])
+
+        app.config(
+            function($routeProvider){
+                $routeProvider
+                .when('/',{templateUrl: "main.html"})
+                .when('/forum',{templateUrl: "forum.html"})
+                .when('/about',{templateUrl: "about.html"})
+                .when('/contact',{templateUrl: "contact.html"})
+                .otherwise({redirectTo: '/'})
+            });
+    </script>
+</head>
+<body ng-app="awareApp">
+
+    <!-- Heading -->
+    <div id="heading">
+        <h1><big><big><big><big>AwareOrg.</big></big></big></big></h1>
+    </div>
+
+    <!-- Nav Bar -->
+    <div>
+        <ul>
+            <li><a href="/"><big>Home</big></a></li>
+            <li><a href="/forum"><big>Forum</big></a></li>
+            <li><a href="/about"><big>About</big></a></li>
+            <li><a href="/contact"><big>Contact Us</big></a></li>
+        </ul>
+    </div>
+
+    <!-- Container for the single page application -->
+    <div ng-view></div>
+</body>
+</html>
