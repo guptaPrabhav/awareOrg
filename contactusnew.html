@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+      /* Styles for the page */
+      body {
+        font-family: Georgia, serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color:#F7DC6F;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      form {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #ccc;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type=text],
+      input[type=email],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+      }
+      input[type=submit] {
+        background-color: #CD6155;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {
+        background-color:#F1C40F ;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
